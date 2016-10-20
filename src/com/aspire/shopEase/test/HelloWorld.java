@@ -7,8 +7,9 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
-@Path("/")
+@Path("hello")
 public class HelloWorld {
+	
 	@GET
 	@Produces("text/html")
 	public Response getStartingPage()
