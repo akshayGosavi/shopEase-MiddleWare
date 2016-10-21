@@ -3,11 +3,11 @@ package com.aspire.shopEase.beans;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonRootName;
 
-@JsonRootName("route")
-public class RouteNode {
+@JsonRootName("point")
+public class ShopCoordinate {
 
-	@JsonProperty("name")
-	private String name;
+	@JsonProperty("node")
+	private int node;
 	
 	@JsonProperty("x")
 	private int x;
@@ -15,12 +15,10 @@ public class RouteNode {
 	@JsonProperty("y")
 	private int y;
 	
-	@JsonProperty("next")
-	private int[] nextPt;
-	
+
 	@Override
 	public String toString() {
-		return "<" + this.name + " (" + x + "," + y + ")>";
+		return node + " (" + x + "," + y + ")";
 	}
 	
 	public int getX_pos() {
@@ -35,17 +33,11 @@ public class RouteNode {
 	public void setY_pos(int y) {
 		this.y = y;
 	}
-	public String getName() {
-		return name;
+	public int getNode() {
+		return node;
 	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public int[] getNextPt() {
-		return nextPt;
-	}
-	public void setNextPt(int[] nextPt) {
-		this.nextPt = nextPt;
+	public void setNode(int node) {
+		this.node = node;
 	}
 	
 	
